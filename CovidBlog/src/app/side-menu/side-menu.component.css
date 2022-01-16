@@ -1,0 +1,51 @@
+.sideMenu{
+    padding-left: 1vw;
+}
+
+.categoryArea{
+    margin-bottom: 2vh;
+}
+
+.categoryHeader img{
+    display: none;
+}
+
+li{
+    border-bottom: 1px solid lightgray;
+    padding: 1vh 0;
+    color: lightgray;
+}
+
+li:hover{
+    color: white;
+    background-color: lightgray;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    margin-top: 1vh;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+}
+
+form input{
+    border: none;
+    width: 90%;
+    padding-left: 5%;
+}
+
+form input:focus-visible{
+    outline: none;
+}
+.buttonArea{
+    width: 20px;
+    padding: 2%;
+}
+
+.imgButton{
+    width: 100%;
+}

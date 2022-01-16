@@ -1,0 +1,46 @@
+.card{
+    width: 25vw;
+    height: 50vh;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+
+    border: 1px solid lightgray;
+    box-shadow: 1px 2px 1px lightgray;
+    border-radius: 5px;
+
+}
+.imgArea{
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+}
+
+.imgArea img{
+    width: 100%;
+}
+
+.textArea{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 0 14px;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 40%;
+}
+
+.textArea h4{
+    font-size: 17px;
+}
+.textArea p{
+    font-size: 12px;
+}
+
+.textArea a{
+    font-size: 11px;
+    text-decoration: none;
+}

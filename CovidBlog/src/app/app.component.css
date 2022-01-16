@@ -1,0 +1,20 @@
+main{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 1vw;
+
+    margin-bottom: 2vh;
+}
+
+.posts{
+    width: 54vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: start;
+    row-gap: 2vh;
+    
+}
