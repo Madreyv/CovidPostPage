@@ -1,0 +1,36 @@
+@media screen and (min-device-width : 481px) and (max-device-width : 800px){
+
+    .posts{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card{
+        width: 35vw;
+        height: 50vh;
+    }
+
+    .imgArea{
+        height: 44%;
+    }
+
+    .textArea{
+        height: 56%;
+    }
+
+    .textArea h4{
+        font-size: 18px;
+    }
+
+    .textArea p{
+        font-size: 14px;
+    }
+
+    .textArea a{
+        font-size: 13px;
+    }
+
+    .sideMenu{
+        padding: 0;
+    }
+
+}
