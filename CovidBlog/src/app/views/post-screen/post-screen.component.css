@@ -1,0 +1,29 @@
+
+.postArea{
+    width: 70vw;
+    margin-right: 2vw;
+}
+
+.postTitleArea{
+    height: 35vh;
+    width: 100%;
+    background-image: url('https://www2.ufjf.br/progepe/wp-content/uploads/sites/28/2020/03/Covid-19-1024x576.jpg');
+    background-size: cover;
+    background-position-y: 36%;
+    color: white;
+    position: relative;
+
+    border: 1px solid red;
+}
+
+.postTitleArea h1{
+    position: absolute;
+    top: 3vh;
+    right: 0;
+    margin-right: 3vw;
+}
+
+.postTextArea{
+    text-align: justify;
+    margin-top: 3vh;
+}

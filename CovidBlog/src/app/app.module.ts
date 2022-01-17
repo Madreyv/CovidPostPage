@@ -1,10 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpClientModule} from '@angular/common/http'
 
+
+import { SearchHeaderComponent } from './views/search-header/search-header.component';
+import { PostCardComponent } from './views/post-card/post-card.component';
+import { SideMenuComponent } from './views/side-menu/side-menu.component';
 import { AppComponent } from './app.component';
-import { SearchHeaderComponent } from './search-header/search-header.component';
-import { PostCardComponent } from './post-card/post-card.component';
-import { SideMenuComponent } from './side-menu/side-menu.component';
+import { AppRoutingModule } from './app-routing.module';
+import { PostScreenComponent } from './views/post-screen/post-screen.component';
 
 @NgModule({
   declarations: [
@@ -12,9 +16,12 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
     SearchHeaderComponent,
     PostCardComponent,
     SideMenuComponent,
+    PostScreenComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
