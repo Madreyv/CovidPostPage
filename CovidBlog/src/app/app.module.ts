@@ -9,6 +9,8 @@ import { SideMenuComponent } from './views/side-menu/side-menu.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PostScreenComponent } from './views/post-screen/post-screen.component';
+import { PostFormComponent } from './views/post-form/post-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,11 +19,13 @@ import { PostScreenComponent } from './views/post-screen/post-screen.component';
     PostCardComponent,
     SideMenuComponent,
     PostScreenComponent,
+    PostFormComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

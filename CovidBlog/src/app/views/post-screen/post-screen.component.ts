@@ -22,7 +22,7 @@ export class PostScreenComponent implements OnInit {
     this.getPost()
   }
 
-  getPost(){
+  getPost():void{
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.postService.getPost(id).subscribe(data => {
       this.post = data

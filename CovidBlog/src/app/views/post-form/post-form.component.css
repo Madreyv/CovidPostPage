@@ -1,0 +1,9 @@
+form{
+    display: flex;
+    flex-direction: column;
+    margin-right: 2vh;
+}
+
+textarea{
+    margin: 2vh 0;
+}

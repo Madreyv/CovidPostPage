@@ -18,7 +18,15 @@ export class PostsService {
     return this.http.get<Post[]>(this.urlBase + 'posts');
   }
 
-  public getPost(id) : Observable<Post>{
+  public getPost(id: any) : Observable<Post>{
     return this.http.get<Post>(`${this.urlBase}posts/${id}`)
+  }
+
+  public createPost (post: Post): Observable<Post>{
+    return this.http.post<Post>(this.urlBase + 'posts',post,{
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    } )
   }
 }
