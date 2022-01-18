@@ -5,6 +5,7 @@ import { PostCardComponent } from './views/post-card/post-card.component';
 import { PostScreenComponent } from './views/post-screen/post-screen.component';
 import { PostFormComponent } from './views/post-form/post-form.component';
 
+
 const routes:Routes = [
   {
     path:"",
@@ -17,6 +18,10 @@ const routes:Routes = [
   {
     path:'post/:id',
     component:PostScreenComponent
+  },
+  {
+    path:'post/search/:search',
+    component:PostCardComponent
   },
 ]
 

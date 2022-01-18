@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common'
 import { PostsService } from 'src/app/shared/service/posts.service';
 import { Post } from 'src/app/shared/models/post.model';
+import { SearchHeaderComponent } from '../search-header/search-header.component';
 
 @Component({
   selector: 'app-post-screen',

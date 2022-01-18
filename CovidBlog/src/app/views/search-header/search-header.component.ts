@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from 'src/app/shared/service/search.service';
 
 @Component({
   selector: 'app-search-header',
@@ -9,7 +10,7 @@ export class SearchHeaderComponent implements OnInit {
   searchTerm: string;
   numberOfResults: Number;
   
-  constructor() { 
+  constructor(private searchService: SearchService) { 
     this.numberOfResults = 20;
     this.searchTerm = 'Covid 19'
   }
@@ -17,4 +18,7 @@ export class SearchHeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  get title():string{
+    return this.searchService.searchData.title
+  }
 }

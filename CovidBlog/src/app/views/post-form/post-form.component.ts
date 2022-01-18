@@ -12,8 +12,8 @@ export class PostFormComponent implements OnInit {
 
   post : Post = {
     userId:1,
-    title:"titulo",
-    body:"Corpo"
+    title:"",
+    body:""
   }
 
   constructor(private postService: PostsService, private router: Router) { }

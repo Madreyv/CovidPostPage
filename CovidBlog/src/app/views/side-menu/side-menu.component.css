@@ -46,6 +46,11 @@ form input:focus-visible{
     padding: 2%;
 }
 
+.buttonArea :hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+
 .imgButton{
     width: 100%;
 }
