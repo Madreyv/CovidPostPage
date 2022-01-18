@@ -38,7 +38,6 @@ Acredito que muita coisa pode ser melhorado. Meu domínio de técnologia é em R
 #### Tablets
 ![image](https://user-images.githubusercontent.com/20729709/149993920-03c4f65e-2077-413d-973a-674ec8a750fd.png)
 ![image](https://user-images.githubusercontent.com/20729709/149993996-0d6ef59a-4d1f-4dca-9333-3b563f9f00d1.png)
-![image](https://user-images.githubusercontent.com/20729709/149994140-a0aa1aa1-e677-458b-b6c4-ad10f1cfb624.png)
 ![image](https://user-images.githubusercontent.com/20729709/149994198-3a407ebf-0f4b-42ad-ba69-e8ecf8ad9fc6.png)
 
 #### Mobile
