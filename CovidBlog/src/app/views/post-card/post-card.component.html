@@ -1,0 +1,16 @@
+<section class="posts">
+    <div *ngFor="let post of filtered">
+    
+        <div class="card">
+            <div class="imgArea">
+                <img src='https://www2.ufjf.br/progepe/wp-content/uploads/sites/28/2020/03/Covid-19-1024x576.jpg'/>
+            </div>
+            <div class="textArea">
+                <h4>{{post.title}}</h4>
+                <p>{{post.body}}</p>
+                <a routerLink="/post/{{post.id}}">Ler mais</a>
+            </div>
+        </div>
+    </div>
+</section>
+

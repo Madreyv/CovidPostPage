@@ -1,0 +1,9 @@
+<div class="formContainer">
+    <h1>Novo Post</h1>
+    <form (submit)="createPost()">
+        <label for="title">Titulo</label>
+        <input type="text" [(ngModel)]="post.title" name='title' id="title" required />
+        <textarea name="body" [(ngModel)]="post.body" rows="10" cols="50" id="body" required placeholder="Digite Algo"></textarea>
+        <button>criar</button>
+    </form>
+</div>
