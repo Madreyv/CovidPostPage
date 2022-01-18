@@ -13,7 +13,6 @@
     color: white;
     position: relative;
 
-    border: 1px solid red;
 }
 
 .postTitleArea h1{
@@ -26,4 +25,23 @@
 .postTextArea{
     text-align: justify;
     margin-top: 3vh;
+}
+
+@media screen and (max-device-width : 480px){
+    .postArea{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        padding: 2vh;
+        align-items: center;
+        justify-content: flex-start;   
+        margin: 0; 
+    
+    }
+
+    .postTitleArea h1{
+        left: 4%;
+        top: 70%;
+        margin: 0px;
+    }
 }

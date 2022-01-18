@@ -7,14 +7,14 @@ import { PostsService } from './posts.service';
 @Injectable({
   providedIn: 'root'
 })
-export class SearchService {
+export class GlobalService {
   private _searchData = new BehaviorSubject<SearchHeaderModel>({
     title:'',
     search: false,
     post:[],
     filtered:null
   })
-  private posts:Post[]
+ 
 
   constructor(public postService : PostsService) { }
 

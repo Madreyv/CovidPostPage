@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { SearchService } from 'src/app/shared/service/search.service';
+import { GlobalService } from 'src/app/shared/service/GlobalService';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +9,7 @@ import { SearchService } from 'src/app/shared/service/search.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private router : Router, private search: SearchService) { }
+  constructor(private router : Router, private search: GlobalService) { }
 
   ngOnInit(): void {
   }

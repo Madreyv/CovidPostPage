@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SearchHeaderModel } from 'src/app/shared/models/searchHeader.model';
-import { SearchService } from 'src/app/shared/service/search.service';
+import { GlobalService } from 'src/app/shared/service/GlobalService';
 
 @Component({
   selector: 'app-side-menu',
@@ -18,7 +18,7 @@ export class SideMenuComponent implements OnInit {
   }
   
   public searchField : string= ''
-  constructor(private router : Router, private search: SearchService) { }
+  constructor(private router : Router, private search: GlobalService) { }
 
   ngOnInit(): void {
   }

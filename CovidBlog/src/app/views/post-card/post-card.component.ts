@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Post } from 'src/app/shared/models/post.model';
 import { SearchHeaderModel } from 'src/app/shared/models/searchHeader.model';
 import { PostsService } from 'src/app/shared/service/posts.service';
-import { SearchService } from 'src/app/shared/service/search.service';
+import { GlobalService } from 'src/app/shared/service/GlobalService';
 
 
 @Component({
@@ -17,7 +17,7 @@ export class PostCardComponent implements OnInit {
 
   constructor(
     public postService : PostsService,
-    private search: SearchService,
+    private search: GlobalService,
   ) { }
 
   ngOnInit(): void {

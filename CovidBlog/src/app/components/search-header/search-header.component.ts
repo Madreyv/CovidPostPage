@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SearchService } from 'src/app/shared/service/search.service';
+import { GlobalService } from 'src/app/shared/service/GlobalService';
 
 @Component({
   selector: 'app-search-header',
@@ -8,7 +8,7 @@ import { SearchService } from 'src/app/shared/service/search.service';
 })
 export class SearchHeaderComponent implements OnInit {
   
-  constructor(private searchService: SearchService) { 
+  constructor(private searchService: GlobalService) { 
     
   }
 

@@ -8,3 +8,10 @@ main{
 
     margin-bottom: 2vh;
 }
+
+@media screen and (max-device-width : 480px){
+    main{
+        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+}

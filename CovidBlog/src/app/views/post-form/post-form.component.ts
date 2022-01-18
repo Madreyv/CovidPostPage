@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Post } from 'src/app/shared/models/post.model';
 import { PostsService } from 'src/app/shared/service/posts.service';
-import { SearchService } from 'src/app/shared/service/search.service';
+import { GlobalService } from 'src/app/shared/service/GlobalService';
 
 @Component({
   selector: 'app-post-form',
@@ -20,7 +20,7 @@ export class PostFormComponent implements OnInit {
   constructor(
     private postService: PostsService, 
     private router: Router,
-    private search: SearchService   
+    private search: GlobalService   
     ) { }
 
   ngOnInit(): void {

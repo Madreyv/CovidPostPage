@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common'
 import { PostsService } from 'src/app/shared/service/posts.service';
 import { Post } from 'src/app/shared/models/post.model';
-import { SearchService } from 'src/app/shared/service/search.service';
+import { GlobalService } from 'src/app/shared/service/GlobalService';
 
 @Component({
   selector: 'app-post-screen',
@@ -15,7 +15,7 @@ export class PostScreenComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private search: SearchService
+    private search: GlobalService
   ) { }
 
   ngOnInit(): void {
