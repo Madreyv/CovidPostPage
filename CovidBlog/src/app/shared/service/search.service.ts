@@ -9,11 +9,10 @@ import { PostsService } from './posts.service';
 })
 export class SearchService {
   private _searchData = new BehaviorSubject<SearchHeaderModel>({
-    title:'Covid 1',
-    searchData: false,
+    title:'',
+    search: false,
     post:[],
-    filtered:[]
-    // value: 19
+    filtered:null
   })
   private posts:Post[]
 
@@ -24,7 +23,6 @@ export class SearchService {
   }
 
   set searchData(data:SearchHeaderModel){
-    console.log(this.searchData)
     this._searchData.next(data)
   }
 }

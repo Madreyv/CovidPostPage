@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PostScreenComponent } from './views/post-screen/post-screen.component';
 import { PostFormComponent } from './views/post-form/post-form.component';
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './views/header/header.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     SideMenuComponent,
     PostScreenComponent,
     PostFormComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

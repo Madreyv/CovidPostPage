@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Post } from 'src/app/shared/models/post.model';
 import { PostsService } from 'src/app/shared/service/posts.service';
+import { SearchService } from 'src/app/shared/service/search.service';
 
 @Component({
   selector: 'app-post-form',
@@ -16,7 +17,11 @@ export class PostFormComponent implements OnInit {
     body:""
   }
 
-  constructor(private postService: PostsService, private router: Router) { }
+  constructor(
+    private postService: PostsService, 
+    private router: Router,
+    private search: SearchService   
+    ) { }
 
   ngOnInit(): void {
   }
@@ -24,7 +29,9 @@ export class PostFormComponent implements OnInit {
   createPost() : void{
     this.postService.createPost(this.post).subscribe((data) =>{
       alert('Post Criado')
-      console.log(data)
+      this.search.searchData.post.push(data)
+      this.router.navigate([`/post/${data.id}`])
+
     })
   }
 

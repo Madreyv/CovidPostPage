@@ -2,7 +2,7 @@ import { Post } from "./post.model";
 
 export interface SearchHeaderModel{
     title:string
-    searchData:boolean
+    search:boolean
     post:Post[]
     filtered:Post[]
     // value:number

@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common'
 import { PostsService } from 'src/app/shared/service/posts.service';
 import { Post } from 'src/app/shared/models/post.model';
-import { SearchHeaderComponent } from '../search-header/search-header.component';
+import { SearchService } from 'src/app/shared/service/search.service';
 
 @Component({
   selector: 'app-post-screen',
@@ -11,12 +11,11 @@ import { SearchHeaderComponent } from '../search-header/search-header.component'
   styleUrls: ['./post-screen.component.css']
 })
 export class PostScreenComponent implements OnInit {
-  post:Post
+  post:Post[]
 
   constructor(
     private route: ActivatedRoute,
-    private postService: PostsService,
-    private location:Location
+    private search: SearchService
   ) { }
 
   ngOnInit(): void {
@@ -25,8 +24,14 @@ export class PostScreenComponent implements OnInit {
 
   getPost():void{
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.postService.getPost(id).subscribe(data => {
-      this.post = data
+    
+    //fução baixo utilizada apenas se fosse utilizar a API para carregar um post expecífico. Como a API não adiciona novos post vamos utilizar do nosso serviço global
+    // this.postService.getPost(id).subscribe(data => {
+    //   this.post = data
+    // })
+
+    this.post = this.search.searchData.post.filter((post) => {
+      return post.id === id
     })
   }
 }

@@ -12,11 +12,12 @@ export class SideMenuComponent implements OnInit {
 
   public term : SearchHeaderModel = {
     title:'',
-    searchData:false,
+    search:false,
     post:[],
     filtered:[]
   }
   
+  public searchField : string= ''
   constructor(private router : Router, private search: SearchService) { }
 
   ngOnInit(): void {
@@ -28,12 +29,13 @@ export class SideMenuComponent implements OnInit {
 
   searchTerm():void{
     this.term = this.search.searchData
+    this.term.title = this.searchField
+    this.term.search = true
     this.term.filtered = this.search.searchData.post.filter((post)=>{
       return post.title.includes(this.term.title)
     })
     this.search.searchData = this.term
-
-    // this.router.navigate([`/post/search/${this.term.title}`])
+    this.router.navigate(['/'])
   }
 
 }

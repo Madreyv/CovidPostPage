@@ -13,52 +13,27 @@ import { SearchService } from 'src/app/shared/service/search.service';
 })
 export class PostCardComponent implements OnInit {
   posts : Post[];
-  public term : SearchHeaderModel = {
-    title:'',
-    searchData:false,
-    post:[],
-    filtered:[]
-  }
+  
 
   constructor(
     public postService : PostsService,
     private search: SearchService,
-    private route:ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    const term = this.route.snapshot.paramMap.get('search')
-    if(term !== null ){
-      this.searchPost(term)
-    }else{
       this.getPosts();
-    }
-
-
   }
 
   getPosts(){
-    this.postService.getPosts().subscribe(data => {
-      this.term.post = data
-      this.term.filtered = data
-      // this.posts = data;
-      // console.log(this.posts)
-      this.search.searchData = this.term
-    })
-  }
-
-  searchPost(term:string){
-    this.postService.getPosts().subscribe(data => {
-      this.posts = data.filter((post) =>{
-        return post.title.includes(term)
+    if(this.search.searchData.filtered === null){
+      this.postService.getPosts().subscribe(data => {
+        this.search.searchData.post = data
+        this.search.searchData.filtered = data
       })
-      this.term.post = this.posts
-      this.search.searchData = this.term
-    })
+    }
   }
 
   get filtered(): Post[]{
-    console.log(this.search.searchData)
     return this.search.searchData.filtered
   }
 

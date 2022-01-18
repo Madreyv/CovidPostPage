@@ -40,6 +40,7 @@
     align-items: flex-start;
     justify-content: space-evenly;
     height: 40%;
+    width: 95%;
 }
 
 .textArea h4{
@@ -47,6 +48,7 @@
 }
 .textArea p{
     font-size: 12px;
+    color: #A9A9A9;
 }
 
 .textArea a{
